@@ -18,23 +18,23 @@ Access to Git, VSTS(permissions to setup a new Release Definition ) and Azure(pe
 Clone the repository containing my solution from here (https://github.com/Dries-Venter/AssuTest)
 1. In VSTS create a new release
     Using the Azure Resource Group Deployment task create a new deployment specifying the following:
-        Display name : Azure Deployment:Create Or Update Resource Group action on Assu-DEV-RG01
-        Azure Details
-        Azure subscription : Specify your azure service endpoint or create one
-        Resource group : Assu-DEV-RG01
-        Location : Southeast Asia
-        Template location : $(System.DefaultWorkingDirectory)/_AssuSolution/AssuSolution/azuredeploy.json
-        Template parameters : $(System.DefaultWorkingDirectory)/_AssuSolution/AssuSolution/azuredeploy.parameters.json
-        Override template parameters:
-        -adminUsername "xadmin" -adminPassword <enter_a_secure_password_here> -vmName "Assu-DEV-VM01" -adminPublicKey "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAq6jBOcRGwzu/Z48nFg7GH1O3zI1FAR4xJlqhKXKeSNiJMzazqDdOBNO8Z3VVMdKI12bWw4GyQZkHu2iqlLtWNSZ85deEQlpxDCQHe4RTQJMxCr7r9jTj7UKDselM83UlnU2YHbbhTtmqxDUiexIFabkNDXngdJjfXIUmN5DZDyaHn9PLFOvuqXxCiJolTcAoIOHjFPxX6C0KK9xswkP498JtPd1dK7DJXXGE1V3XlstC3rvYRr1vBoHjG5GoehseMF4UPEL2wnhJWhK4+TruhxHh5lPR7AttC+opdWq5zuyQ77XcZqFEd5sd6HMg3Gel4x1CrDzTqBc85zK74wd8hw==" -dnsNameForPublicIP assudevvm01 -ubuntuOSVersion "16.04-LTS" -networkSecurityGroupName "Assu-DEV-VM01-nsg" -mySourceIPAddress "<enter_your_public_IP_here(Use CIDR format)>" -nicName "Assu-DEV-VMNic" -vmSize "Standard_B1s" -virtualNetworkName "Assu-DEV-VNET" -diskSizeGB "30"
-        Deployment mode: Complete
-        Advanced deployment options for virtual machines
-        Enable prerequisites : Configure with WinRM agent
-        VM details for WinRM :$(ResourceGroupName)
-        Outputs
-        Deployment outputs: $(DeploymentOutput)
-        Control Options: Enabled
-        Continue on error: Timeout
+        * Display name : Azure Deployment:Create Or Update Resource Group action on Assu-DEV-RG01
+        * Azure Details
+        * Azure subscription : Specify your azure service endpoint or create one
+        * Resource group : Assu-DEV-RG01
+        * Location : Southeast Asia
+        * Template location : $(System.DefaultWorkingDirectory)/_AssuSolution/AssuSolution/azuredeploy.json
+        * Template parameters : $(System.DefaultWorkingDirectory)/_AssuSolution/AssuSolution/azuredeploy.parameters.json
+        * Override template parameters:
+        * -adminUsername "xadmin" -adminPassword <enter_a_secure_password_here> -vmName "Assu-DEV-VM01" -adminPublicKey "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAq6jBOcRGwzu/Z48nFg7GH1O3zI1FAR4xJlqhKXKeSNiJMzazqDdOBNO8Z3VVMdKI12bWw4GyQZkHu2iqlLtWNSZ85deEQlpxDCQHe4RTQJMxCr7r9jTj7UKDselM83UlnU2YHbbhTtmqxDUiexIFabkNDXngdJjfXIUmN5DZDyaHn9PLFOvuqXxCiJolTcAoIOHjFPxX6C0KK9xswkP498JtPd1dK7DJXXGE1V3XlstC3rvYRr1vBoHjG5GoehseMF4UPEL2wnhJWhK4+TruhxHh5lPR7AttC+opdWq5zuyQ77XcZqFEd5sd6HMg3Gel4x1CrDzTqBc85zK74wd8hw==" -dnsNameForPublicIP assudevvm01 -ubuntuOSVersion "16.04-LTS" -networkSecurityGroupName "Assu-DEV-VM01-nsg" -mySourceIPAddress "<enter_your_public_IP_here(Use CIDR format)>" -nicName "Assu-DEV-VMNic" -vmSize "Standard_B1s" -virtualNetworkName "Assu-DEV-VNET" -diskSizeGB "30"
+        * Deployment mode: Complete
+        * Advanced deployment options for virtual machines
+        * Enable prerequisites : Configure with WinRM agent
+        * VM details for WinRM :$(ResourceGroupName)
+        * Outputs
+        * Deployment outputs: $(DeploymentOutput)
+        * Control Options: Enabled
+        * Continue on error: Timeout
 
 2. Next trigger a release to deploy the VM
 
@@ -51,12 +51,12 @@ The following site has a section to guide you though the authentication setup in
     The motd file is also in the same file location.
 
 ## References used in the project
-    https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/
-    http://the.earth.li/~sgtatham/putty/0.53b/htmldoc/Chapter8.html
-    https://4sysops.com/archives/powershell-remoting-with-ssh-public-key-authentication/
-    https://cmatskas.com/run-ssh-with-powershell/
-    https://support.rackspace.com/how-to/logging-in-with-an-ssh-private-key-on-linuxmac/
-    https://superuser.com/questions/601942/use-bash-script-to-copy-select-txt-files-from-remote-server-to-my-local-machine/601943
+    * https://www.linode.com/docs/security/authentication/use-public-key-authentication-with-ssh/
+    * http://the.earth.li/~sgtatham/putty/0.53b/htmldoc/Chapter8.html
+    * https://4sysops.com/archives/powershell-remoting-with-ssh-public-key-authentication/
+    * https://cmatskas.com/run-ssh-with-powershell/
+    * https://support.rackspace.com/how-to/logging-in-with-an-ssh-private-key-on-linuxmac/
+    *https://superuser.com/questions/601942/use-bash-script-to-copy-select-txt-files-from-remote-server-to-my-local-machine/601943
 
  
 
