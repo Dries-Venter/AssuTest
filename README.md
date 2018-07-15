@@ -13,7 +13,6 @@ I chose to have an automated deployment using VSTS Release manager deploying to 
 ### Prerequisites
 To replicate this installation you will need to have the following:
 Access to Git, VSTS(permissions to setup a new Release Definition ) and Azure(permissions to create a new service endpoint or use an existing one to deploy to a Active Azure Subscription).
-```
 
 ### Deploying the solution
 Clone the repository containing my solution from here (https://github.com/Dries-Venter/AssuTest)
