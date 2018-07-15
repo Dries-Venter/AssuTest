@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "xadmin"
+    },
+    "dnsNameForPublicIP": {
+      "value": "assudevvm01.southeastasia.cloudapp.azure.com"
+    },
+    "vmName": {
+      "value": "Assu-DEV-VM01"
+    },
+    "adminPublicKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAq6jBOcRGwzu/Z48nFg7GH1O3zI1FAR4xJlqhKXKeSNiJMzazqDdOBNO8Z3VVMdKI12bWw4GyQZkHu2iqlLtWNSZ85deEQlpxDCQHe4RTQJMxCr7r9jTj7UKDselM83UlnU2YHbbhTtmqxDUiexIFabkNDXngdJjfXIUmN5DZDyaHn9PLFOvuqXxCiJolTcAoIOHjFPxX6C0KK9xswkP498JtPd1dK7DJXXGE1V3XlstC3rvYRr1vBoHjG5GoehseMF4UPEL2wnhJWhK4+TruhxHh5lPR7AttC+opdWq5zuyQ77XcZqFEd5sd6HMg3Gel4x1CrDzTqBc85zK74wd8hw=="
+    },
+    "diskSizeGB": {
+      "value": "30"
+    },
+    "nicName": {
+      "value": "Assu-DEV-VMNic"
+    },
+    "virtualNetworkName": {
+      "value": "Assu-DEV-VNET"
+    },
+    "vmSize": {
+      "value": "Standard_B1s"
+    },
+    "networkSecurityGroupName": {
+      "value": "Assu-DEV-VM01-nsg"
+    },
+    "mySourceIPAddress": {
+      "value": "222.153.49.1/32"
+    }
+  }
+}
