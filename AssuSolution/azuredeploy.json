@@ -188,7 +188,7 @@
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]",
           "linuxConfiguration": {
-            "disablePasswordAuthentication": "False",
+            "disablePasswordAuthentication": "True",
             "ssh": {
               "publicKeys": [
                 {
